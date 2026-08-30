@@ -1,0 +1,151 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar { width: 30%;}
+@media( max-width: 768px){
+    .sidebar { width: 100%;}
+}
+image{
+    max-width: 100%;
+    height: auto;
+}
+.head video
+{
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+    
+}
+.head
+{
+    overflow: hidden;
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    border-bottom: 2px solid #00aaff
+    
+}
+
+.cont img
+{
+    height: 100px;
+    width: 250px;
+    float: inline-start;
+}
+ nav ul
+{
+    list-style-type: none;
+    display: inline;
+}
+nav li a 
+{
+    text-decoration: none;
+    text-align: center;
+    color: rgb(0, 225, 225);
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
+}
+nav li
+{
+    display: inline;
+    padding: 15px;
+    font-size: 21px;
+}
+
+nav
+{
+    float: inline-end;
+    margin-top: 30px;
+    
+}
+.container img
+{
+    justify-content: center;
+    width: 40%;
+    height: 300px;
+    border-radius: 30px;
+    z-index: 1;
+    top: 50%;
+    left: 40%;
+    
+    text-align: center;
+}
+.cont
+{
+    
+    height: 100px;
+    background-color: black;
+    
+}
+.container
+{
+    text-align: center;
+    margin-top: 70px;
+}
+.container h1
+{
+    text-align: center;
+    color: rgb(0, 225, 225);
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
+    z-index: 5;
+
+}
+
+.pamone
+{
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+.bio
+{
+    color: #00aaff;
+    text-align: center;
+    
+}
+.bio h4
+{
+ text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
+ font-size: 30px;
+ margin-top: 70px;
+}
+.bio p
+{
+
+    padding: 15px;
+    font-size: 25px;
+    margin-top: 30x;
+}
+.skills
+{
+    text-align: center;
+    color: #00aaff;
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
+    font-size: 30px;
+}
+.bio-im img
+{
+    border-radius: 100px;
+    padding: 50px;
+}
+.ski 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-height: 100px;
+    overflow: hidden;
+}
+.ski img
+{
+    width: 150px;
+    height: 100px;
+    padding-left: 80px;
+}
