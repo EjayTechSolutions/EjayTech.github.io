@@ -1,13 +1,184 @@
-body
-{
+/* ==========================================
+   1. GLOBAL & BASE STYLES
+   ========================================== */
+body {
     margin: 0;
     padding: 0;
     background-color: black;
     font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling on mobile */
 }
-.sidebar { width: 30%;}
-@media( max-width: 768px){
-    @media screen and (max-width: 768px) {
+
+/* Fixed typo from 'imag' to 'img' */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================
+   2. HERO VIDEO BACKGROUND
+   ========================================== */
+.head {
+    overflow: hidden;
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    border-bottom: 2px solid #00aaff;
+}
+
+.head video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+/* ==========================================
+   3. NAVIGATION BAR (MODERN FLEXBOX)
+   ========================================== */
+.cont {
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.cont img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: rgb(0, 225, 225);
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgba(0, 170, 255, 0.6);
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: #ffffff;
+}
+
+/* ==========================================
+   4. HERO CONTENT (PROFILE & TRUSTED TEXT)
+   ========================================== */
+.container {
+    text-align: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.container img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.container h1 {
+    color: rgb(0, 225, 225);
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgba(0, 170, 255, 0.6);
+    z-index: 5;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* ==========================================
+   5. BIO SECTION (FLEXBOX GRID)
+   ========================================== */
+.pamone {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 0 40px;
+    align-items: center;
+}
+
+.bio {
+    flex: 1;
+    color: #00aaff;
+    text-align: left;
+}
+
+.bio h4 {
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgba(0, 170, 255, 0.6);
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.bio p {
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.bio-im {
+    flex: 1;
+    text-align: center;
+}
+
+.bio-im img {
+    border-radius: 50%; /* Makes circular profile image */
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 3px solid #00aaff;
+}
+
+.icons {
+    margin-top: 20px;
+}
+
+/* ==========================================
+   6. SKILLS SECTION
+   ========================================== */
+.skills {
+    text-align: center;
+    color: #00aaff;
+    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgba(0, 170, 255, 0.6);
+    font-size: 30px;
+    margin-top: 60px;
+}
+
+.ski {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid columns */
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.ski img {
+    width: 100px;
+    height: auto;
+}
+
+/* ==========================================
+   7. MOBILE PHONE RESPONSIVE QUERIES (< 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
     /* Collapse Nav Top Bar into a neat row/column combo */
     .cont {
         flex-direction: column;
@@ -68,147 +239,4 @@ body
         max-width: 200px;
         padding: 0; /* Cleared out giant desktop padding */
     }
-}
-
-}
-imag{
-    max-width: 100%;
-    height: auto;
-}
-.head video
-{
-     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    z-index: -2;
-    object-fit: cover;
-    
-}
-.head
-{
-    overflow: hidden;
-    position: relative;
-    height: 95vh;
-    width: 100%;
-    border-bottom: 2px solid #00aaff
-    
-}
-
-.cont img
-{
-    height: 100px;
-    width: 250px;
-    float: inline-start;
-}
- nav ul
-{
-    list-style-type: none;
-    display: inline;
-}
-nav li a 
-{
-    text-decoration: none;
-    text-align: center;
-    color: rgb(0, 225, 225);
-    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
-}
-nav li
-{
-    display: inline;
-    padding: 15px;
-    font-size: 21px;
-}
-
-nav
-{
-    float: inline-end;
-    margin-top: 30px;
-    
-}
-.container img
-{
-    justify-content: center;
-    width: 40%;
-    height: 300px;
-    border-radius: 30px;
-    z-index: 1;
-    top: 50%;
-    left: 40%;
-    
-    text-align: center;
-}
-.cont
-{
-    
-    height: 100px;
-    background-color: black;
-    
-}
-.container
-{
-    text-align: center;
-    margin-top: 70px;
-}
-.container h1
-{
-    text-align: center;
-    color: rgb(0, 225, 225);
-    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
-    z-index: 5;
-
-}
-
-.pamone
-{
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
-.bio
-{
-    color: #00aaff;
-    text-align: center;
-    
-}
-.bio h4
-{
- text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
- font-size: 30px;
- margin-top: 100px;
-}
-.bio p
-{
-
-    padding: 15px;
-    font-size: 25px;
-    margin-top: 50px;
-}
-.skills
-{
-    text-align: center;
-    color: #00aaff;
-    text-shadow: 0 0 8px rgb(0, 170, 255), 0 0 20px rgb(0, 170, 255, 0.6);
-    font-size: 30px;
-}
-.bio-im img
-{
-    border-radius: 400px;
-    padding: 50px;
-
-}
-.ski 
-{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    max-height: 100px;
-    overflow: hidden;
-}
-.ski img
-{
-    width: 150px;
-    height: 100px;
-    padding-left: 80px;
 }
