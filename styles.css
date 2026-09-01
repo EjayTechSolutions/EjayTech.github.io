@@ -52,7 +52,7 @@ img {
 
 .cont img {
     height: auto;
-    max-height: 60px;
+    max-height:90px;
     width: auto;
 }
 
@@ -209,4 +209,30 @@ nav li a:hover {
         top: 80px; 
         height: calc(100vh - 80px);
     }
+
+    .ski {
+        /* Changes 4 columns into a neat 2x2 grid on standard phone screens */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    
+    .ski img {
+        max-width: 90px;
+}
+
+
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin-top: 15px;
+    width: 100%;
+}
+.bio-im {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
