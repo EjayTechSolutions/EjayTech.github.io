@@ -179,71 +179,17 @@ nav li a:hover {
    7. MOBILE PHONE RESPONSIVE QUERIES (< 768px)
    ========================================== */
 @media screen and (max-width: 768px) {
-    /* Collapse Nav Top Bar into a neat row/column combo */
-    .cont {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    /* Strip away inline HTML margin-right pushes */
-    .cont h1 {
-        margin-right: 0 !important; 
-        font-size: 22px !important;
-    }
-
-    nav ul {
-        gap: 20px;
-    }
-
-    /* Keep Hero Heading readable on tiny mobile screens */
-    .container h1 {
-        font-size: 1.5rem;
-    }
-
-    .container img {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* Stack the About Content vertically instead of side-by-side */
-    .pamone {
-        flex-direction: column-reverse;
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .bio {
-        text-align: center;
-    }
-
-    /* Balance heavy typography spacing on small screen display */
-    .bio h2 {
-        font-size: 26px !important;
-        margin-top: 30px !important;
-    }
-
-    .bio h2[id="bio"] {
-        margin-top: 40px !important;
-    }
-
-    .bio h4 {
-        font-size: 20px;
-    }
-
-    .bio p {
-        font-size: 16px;
-    }
-    
-    .bio-im img {
-        max-width: 200px;
-        padding: 0; /* Cleared out giant desktop padding */
-    }
-
-    @media screen and (max-width: 768px) {
     /* 1. UNLOCK THE SCROLLING */
     .head {
-        height: auto !important; /* Forces header to expand with content */
+        height.ski {
+        /* Changes 4 columns into a neat 2x2 grid on standard phone screens */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    
+    .ski img {
+        max-width: 90px;
+    }   min-height: 100dvh !important; /* Forces header to expand with content */
         overflow: visible !important; /* Allows you to scroll past the video */
         padding-bottom: 40px;
     }
@@ -281,7 +227,4 @@ nav li a:hover {
     .ski img {
         max-width: 90px;
     }
-}
-
-
 }
