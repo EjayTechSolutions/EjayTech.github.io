@@ -179,64 +179,34 @@ nav li a:hover {
    7. MOBILE PHONE RESPONSIVE QUERIES (< 768px)
    ========================================== */
 @media screen and (max-width: 768px) {
-    /* Collapse Nav Top Bar into a neat row/column combo */
-    .cont {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    /* Strip away inline HTML margin-right pushes */
-    .cont h1 {
-        margin-right: 0 !important; 
-        font-size: 22px !important;
+    /* 1. UNLOCK THE SCROLLING */
+    .head {
+        height: auto !important; /* Forces header to expand with content */
+        overflow: visible !important; /* Allows you to scroll past the video */
+        padding-bottom: 40px;
     }
 
-    nav ul {
-        gap: 20px;
+    /* 2. PREVENT VIDEO FROM OVERSIZING AND ZOOMING */
+    .head video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: none; /* Removes the centering zoom trick used on desktop */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    /* Keep Hero Heading readable on tiny mobile screens */
-    .container h1 {
-        font-size: 1.5rem;
-    }
-
+    /* 3. FIX FIXED HEIGHT IMAGES */
     .container img {
-        width: 180px;
-        height: 180px;
-    }
-
-    /* Stack the About Content vertically instead of side-by-side */
-    .pamone {
-        flex-direction: column-reverse;
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    .bio {
-        text-align: center;
-    }
-
-    /* Balance heavy typography spacing on small screen display */
-    .bio h2 {
-        font-size: 26px !important;
-        margin-top: 30px !important;
-    }
-
-    .bio h2[id="bio"] {
-        margin-top: 40px !important;
-    }
-
-    .bio h4 {
-        font-size: 20px;
-    }
-
-    .bio p {
-        font-size: 16px;
+        width: 150px;
+        height: 150px; /* Reduced fixed height so it doesn't push sections away */
     }
     
-    .bio-im img {
-        max-width: 200px;
-        padding: 0; /* Cleared out giant desktop padding */
+    /* 4. FIX NAVIGATION BAR SPACING */
+    nav {
+        /* Change this from 100px to match your mobile header height */
+        top: 80px; 
+        height: calc(100vh - 80px);
     }
 }
