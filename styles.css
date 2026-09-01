@@ -210,13 +210,6 @@ nav li a:hover {
         width: 150px;
         height: 150px; /* Reduced fixed height so it doesn't push sections away */
     }
-    
-    /* 4. FIX NAVIGATION BAR SPACING */
-    nav {
-        /* Change this from 100px to match your mobile header height */
-        top: 80px; 
-        height: calc(100vh - 80px);
-    }
 
     .ski {
         /* Changes 4 columns into a neat 2x2 grid on standard phone screens */
@@ -226,5 +219,32 @@ nav li a:hover {
     
     .ski img {
         max-width: 90px;
+     }
+
+    nav {
+        position: absolute;
+        top: 80px; /* Aligns right underneath your logo header */
+        right: -100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 70%; /* Keeps it a slide-out panel width wise */
+        
+        /* === THE FIXES === */
+        height: auto; /* Shrinks container height to tightly wrap around links */
+        padding-top: 30px;
+        padding-bottom: 30px; /* Balanced spacing at top and bottom */
+        border-left: 2px solid #00aaff;
+        border-bottom: 2px solid #00aaff; /* Frames the bottom of your floating menu */
+        
+        transition: 0.4s right ease;
+        z-index: 9;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px !important; /* Slightly tighter link spacing for small menus */
     }
 }
+
+
