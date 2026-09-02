@@ -221,29 +221,59 @@ nav li a:hover {
         max-width: 90px;
      }
 
+
+       .cont {
+        position: relative;
+        flex-direction: row !important; /* Keep logo and menu side-by-side */
+        justify-content: space-between;
+        width: 100%;
+    }
+
+      .cont h1 {
+        display: none; /* Recommended for clean mobile layout, or scale to 16px */
+    }
+
+    /* Show the hamburger bars on mobile */
+    .menu-toggle {
+        display: flex;
+        z-index: 10;
+    }
+
+    /* Hide menu links off-screen by default on mobile */
     nav {
         position: absolute;
-        top: 80px; /* Aligns right underneath your logo header */
+        top: 100px; /* Adjust based on your header height */
         right: -100%;
         background-color: rgba(0, 0, 0, 0.95);
-        width: 70%; /* Keeps it a slide-out panel width wise */
-        
-        /* === THE FIXES === */
-        height: auto; /* Shrinks container height to tightly wrap around links */
-        padding-top: 30px;
-        padding-bottom: 30px; /* Balanced spacing at top and bottom */
-        border-left: 2px solid #00aaff;
-        border-bottom: 2px solid #00aaff; /* Frames the bottom of your floating menu */
-        
+        width: 70%;
+        height: calc(100vh - 100px);
         transition: 0.4s right ease;
         z-index: 9;
         margin: 0;
+        padding-top: 50px;
+        border-left: 2px solid #00aaff;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 25px !important; /* Slightly tighter link spacing for small menus */
+        gap: 40px !important;
+    }
+
+    /* Class used by JavaScript to slide menu into view */
+    nav.active {
+        right: 0;
+    }
+
+
+
+   
+
+    .container h1{
+        font-size: 16px; 
+        padding: 0 20px;
+        word-wrap: 1.4;
+     
     }
 }
 
